@@ -1,0 +1,88 @@
+/* styles/index.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Your custom styles here */
+
+.heading{
+    background: linear-gradient(90.09deg, #0CE37B 0.07%, #1393EC 97.46%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -text-fill-color: transparent;
+    font-weight:bold;
+    font-size:30px;
+}
+.text-bg{
+    background: radial-gradient(circle, #1f4d36, #001f3f);
+    color: white;
+}
+.download {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6FCF97;
+    color: white;
+    text-decoration: none; 
+    border-radius: 5px;
+  }
+  
+  .download:hover {
+    background-color: #081C31;
+    color: white;
+    border: 1px solid #ffffff;
+  }
+  .talentContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .talentImg {
+    flex: 1;
+    margin-right: 20px; 
+  }
+  
+  .talentContent {
+    flex: 2;
+  }
+  .border-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    box-shadow: 0 0 25px rgba(0, 128, 0, 0.5); 
+  }
+  .active-link {
+    border-bottom: 0px solid transparent;
+    background-image: linear-gradient(to right, #013801, #01013b); 
+    border-radius: 10px;  
+    font-weight: bold;
+    padding: 0 5px;
+  }
+  @media (max-width: 800px) {
+    .active-link {
+      display: none;
+    }
+    .heading{
+      background: linear-gradient(90.09deg, #0CE37B 0.07%, #1393EC 97.46%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      -text-fill-color: transparent;
+      font-weight:bold;
+      font-size:15px;
+  }
+  .notification .icon{
+    font-size: 10px !important;
+  }
+  }
+  
+ 
+  
+  
+  
+  
