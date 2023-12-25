@@ -1,5 +1,5 @@
 import { FaSignOutAlt } from 'react-icons/fa';
-import axios from 'axios';
+import axios, { AxiosError } from 'axios'; // Import AxiosError type
 
 const Logout = () => {
   const handleLogout = async () => {
@@ -14,7 +14,8 @@ const Logout = () => {
     } catch (error) {
       if (axios.isAxiosError(error)) {
         // Handle Axios errors
-        console.error('Logout failed:', (error as axios.AxiosError).message);
+        const axiosError = error as AxiosError; // Cast error to AxiosError
+        console.error('Logout failed:', axiosError.message);
       } else {
         // Handle other types of errors
         console.error('Logout failed:', (error as Error).message);
