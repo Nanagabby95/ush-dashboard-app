@@ -2,6 +2,7 @@ import Header from "../common/Header";
 import Sidebar from "../common/Sidebar";
 import { Outlet } from "react-router-dom";
 import "../App.css";
+import Copy from "../common/Copy";
 
 const Dashboard = () => {
   return (
@@ -15,9 +16,11 @@ const Dashboard = () => {
         {/* Header */}
         <Header />
 
-        {/* Outlet with Background */}
         <div className="flex-grow p-4 text-darkBlue lg:mt-8 md:mt-[80px] pt-20">
           <Outlet />
+        </div>
+        <div className="text-center pt-8 text-gray-400">
+          <Copy />
         </div>
       </div>
     </div>

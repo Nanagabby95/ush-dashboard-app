@@ -1,5 +1,6 @@
-.mobilesidebar{
+.mobilesidebar ul{
     width: 350px !important;
+    height: auto !important;
     background-color: #081C31;
     color: white;
     position: fixed;

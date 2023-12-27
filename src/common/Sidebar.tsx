@@ -3,13 +3,11 @@ import { useEffect, useState } from 'react';
 import {
   FaSitemap, 
   FaBalanceScale, 
-  FaChartBar, 
-  FaUsers, 
-  FaGlobe,
+  // FaChartBar, 
   FaCogs, 
-  FaBullseye,
-  FaBriefcase, 
-  FaLightbulb , 
+  // FaBullseye,
+  // FaBriefcase, 
+  // FaLightbulb , 
 } from 'react-icons/fa';
 import { Link, useLocation } from 'react-router-dom';
 import Logout from '../components/Buttons/Logout';
@@ -28,50 +26,21 @@ const Sidebar = () => {
   };
   return (
     <div className='flex flex-col pt-20 items-center'>
-      <ul className='w-[350px] p-6 animate-pulse'>
+      <ul className='p-6 fixed'>
       
-      <li className={`pt-4 flex ${isActive('/dashboard/visionstatement')}`}>
-        <FaSitemap className='mr-2' />
+      <li className={`flex animate-pulse mt-6 ${isActive('/dashboard/visionstatement')}`}>
+        <FaSitemap className='mr-2 heading' />
         <Link to="/dashboard/visionstatement">Vision Statement</Link>
       </li>
-      <li className={`pt-4 flex ${isActive('/dashboard/orgStructure')}`}>
-
-        <FaSitemap className='mr-2' />
-        <Link to="/dashboard/orgStructure">Organization Structure</Link>
+      <li className={`mt-6 animate-pulse flex ${isActive('/dashboard/problems')}`}>
+        <FaCogs className='mr-2 heading' />
+        <Link to="/dashboard/problems">Problems and Challenges</Link>
       </li>
-      <li className={`pt-4 flex ${isActive('/dashboard/leadstability')}`}>
-        <FaBalanceScale className='mr-2' />
-        <Link to="/dashboard/leadstability">Leadership Stability</Link>
+      <li className={`mt-6 flex  animate-pulse ${isActive('/dashboard/strategicplans')}`}>
+        <FaBalanceScale className='mr-2 heading' />
+        <Link to="/dashboard/strategicplans">Strategic Plans</Link>
       </li>
-      <li className={`pt-4 flex ${isActive('/dashboard/kpimeasurement')}`}>
-        <FaChartBar className='mr-2' />
-        <Link to="/dashboard/kpimeasurement">Key Performance Indicators</Link>
-      </li>
-      <li className={`pt-4 flex ${isActive('/dashboard/culturalshift')}`}>
-        <FaUsers className='mr-2' />
-        <Link to="/dashboard/culturalshift">Cultural Shift</Link>
-      </li>
-      <li className={`pt-4 flex ${isActive('/dashboard/globaltech')}`}>
-        <FaGlobe className='mr-2' />
-        <Link to="/dashboard/globaltech">Global Technological Leadership</Link>
-      </li>
-      <li className={`pt-4 flex ${isActive('/dashboard/pdiversification')}`}>
-        <FaCogs className='mr-2' />
-        <Link to="/dashboard/pdiversification">Product Diversification & Strategy</Link>
-      </li>
-      <li className={`pt-4 flex ${isActive('/dashboard/salesandmrktn')}`}>
-        <FaBullseye className='mr-2' />
-        <Link to="/dashboard/salesandmrktn">Sales&Marketing Team Establishment</Link>
-      </li>
-      <li className={`pt-4 flex ${isActive('/dashboard/talentacquis')}`}>
-        <FaBriefcase className='mr-2' />
-        <Link to="/dashboard/talentacquis">Talent Acquisition and Development</Link>
-      </li>
-      <li className={`pt-4 flex ${isActive('/dashboard/techinnovation')}`}>
-        <FaLightbulb  className='mr-2' />
-        <Link to="/dashboard/techinnovation">Technology Innovation</Link>
-      </li>
-      <div className='mt-20'>
+      <div className='mt-80'>
         <Logout />
       </div>
       </ul>

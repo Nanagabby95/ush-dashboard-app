@@ -1,14 +1,7 @@
 // Import necessary components and pages
 import Dashboard from './layout/Dashboard';
-import CulturalShift from './pages/dashboard/culturalshift';
-import TalentAcquis from './pages/dashboard/talentacquis';
-import GlobalTech from './pages/dashboard/globaltech';
-import KpiMeasurement from './pages/dashboard/kpimeasurement';
-import LeadStability from './pages/dashboard/leadstability';
-import PDiversification from './pages/dashboard/pdiversification';
-import SalesAndMrktn from './pages/dashboard/salesandmrktn';
-import OrgStructure from './pages/dashboard/orgstructure';
-import TechInnovation from './pages/dashboard/techinnovation';
+import Problems from './pages/dashboard/problems';
+import StrategicPlans from './pages/dashboard/strategicplans';
 import VisionStatement from './pages/dashboard/visionstatement';
 import Setting from './common/setting/Setting';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -23,15 +16,8 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="" element={<Dashboard />}>
-          <Route path="/dashboard/orgstructure" element={<OrgStructure />} />
-          <Route path="/dashboard/techinnovation" element={<TechInnovation />} />
-          <Route path="/dashboard/salesandmrktn" element={<SalesAndMrktn />} />
-          <Route path="/dashboard/leadstability" element={<LeadStability />} />
-          <Route path="/dashboard/pdiversification" element={<PDiversification />} />
-          <Route path="/dashboard/kpimeasurement" element={<KpiMeasurement />} />
-          <Route path="/dashboard/culturalshift" element={<CulturalShift />} />
-          <Route path="/dashboard/globaltech" element={<GlobalTech />} />
-          <Route path="/dashboard/talentacquis" element={<TalentAcquis />} />
+          <Route path="/dashboard/problems" element={<Problems />} />
+          <Route path="/dashboard/strategicplans" element={<StrategicPlans />} />
           <Route path="/dashboard/visionstatement" element={<VisionStatement />} />
 
           {/* Setting is now a child route of dashboard */}

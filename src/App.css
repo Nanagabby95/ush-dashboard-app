@@ -57,12 +57,14 @@
     box-shadow: 0 0 25px rgba(0, 128, 0, 0.5); 
   }
   .active-link {
-    border-bottom: 0px solid transparent;
-    background-image: linear-gradient(to right, #013801, #01013b); 
-    border-radius: 10px;  
+    border-bottom: 6px solid #6FCF97; 
+    /* background-image: linear-gradient(to right, #013801, #01013b);  */
+    border-bottom-left-radius: 10px; 
     font-weight: bold;
     padding: 0 5px;
   }
+  
+
   @media (max-width: 800px) {
     .active-link {
       display: none;
